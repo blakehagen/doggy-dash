@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.doggy {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 85px;
+  height: 85px;
+  background: url('http://images.all-free-download.com/images/graphiclarge/cute_dog_photo_picture_5_168845.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.circle {
+  border-radius: 50%;
+  position: absolute;
+}
