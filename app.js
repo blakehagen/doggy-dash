@@ -24,7 +24,6 @@ $(document).ready(function () {
     }
   });
 
-  var maxDiam         = 25;
   var circleNum       = 20;
   var container       = $(".main-container");
   var containerWidth  = container.width();
