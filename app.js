@@ -25,24 +25,44 @@ $(document).ready(function () {
   });
 
   var circleNum       = 20;
+  var heartNum        = 20;
   var container       = $(".main-container");
   var containerWidth  = container.width();
   var containerHeight = container.height();
 
-  for (var i = 0; i < circleNum; i++) {
-    var newCircle = $("<div />");
-    var d         = 20;
-    newCircle.addClass("circle");
 
-    newCircle.css({
-      width: 20,
-      height: 20,
-      left: Math.random() * Math.max(containerWidth - d, 0),
-      top: Math.random() * Math.max(containerHeight - d, 0),
-      backgroundColor: 'gold'
-    });
-    container.append(newCircle);
+  function createCircles() {
+    for (var i = 0; i < circleNum; i++) {
+      var newCircle = $("<div />");
+      var d         = 20;
+      newCircle.addClass("circle");
+
+      newCircle.css({
+        width: 20,
+        height: 20,
+        left: Math.random() * Math.max(containerWidth - d, 0),
+        top: Math.random() * Math.max(containerHeight - d, 0),
+        backgroundColor: 'gold'
+      });
+      container.append(newCircle);
+    }
   }
+
+  function createHearts() {
+    for (var j = 0; j < heartNum; j++) {
+      var newHeart = $("<div />");
+      newHeart.addClass("heart");
+
+      newHeart.css({
+        left: Math.random() * Math.max(containerWidth, 0),
+        top: Math.random() * Math.max(containerHeight, 0)
+      });
+      container.append(newHeart);
+    }
+  }
+
+  createCircles();
+  createHearts();
 
 
 });
