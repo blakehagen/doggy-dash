@@ -12,9 +12,12 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .main-container {
-  height: 100%;
+  margin: 0;
+  /*border:1px solid blue;*/
+  height: 100vh;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .doggy {
@@ -23,7 +26,8 @@ p, h1, h2, h3, h4, h5, h6 {
   left: 10px;
   width: 85px;
   height: 85px;
-  background: url('http://images.all-free-download.com/images/graphiclarge/cute_dog_photo_picture_5_168845.jpg') no-repeat center center;
+  background: url('white-black.png') no-repeat center center;
+  /*background: url('http://images.all-free-download.com/images/graphiclarge/cute_dog_photo_picture_5_168845.jpg') no-repeat center center;*/
   /*background: url('cute-puppy.png') no-repeat center center;*/
   background-size: cover;
 }
@@ -73,4 +77,56 @@ p, h1, h2, h3, h4, h5, h6 {
   -ms-transform-origin: 100% 100%;
   -o-transform-origin: 100% 100%;
   transform-origin :100% 100%;
+}
+
+/* STAR */
+
+.star-five {
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color: teal;
+  width: 0px;
+  height: 0px;
+  border-right:  100px solid transparent;
+  border-bottom: 70px  solid teal;
+  border-left:   100px solid transparent;
+  -moz-transform:    rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -ms-transform:     rotate(35deg);
+  -o-transform:      rotate(35deg);
+}
+.star-five:before {
+  border-bottom: 80px solid teal;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  -webkit-transform: rotate(-35deg);
+  -moz-transform:    rotate(-35deg);
+  -ms-transform:     rotate(-35deg);
+  -o-transform:      rotate(-35deg);
+
+}
+.star-five:after {
+  position: absolute;
+  display: block;
+  color: teal;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid teal;
+  border-left: 100px solid transparent;
+  -webkit-transform: rotate(-70deg);
+  -moz-transform:    rotate(-70deg);
+  -ms-transform:     rotate(-70deg);
+  -o-transform:      rotate(-70deg);
+  content: '';
 }

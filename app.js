@@ -24,8 +24,10 @@ $(document).ready(function () {
     }
   });
 
-  var circleNum       = 20;
-  var heartNum        = 20;
+  var circleNum = 20;
+  var heartNum  = 20;
+  var starNum   = 4;
+
   var container       = $(".main-container");
   var containerWidth  = container.width();
   var containerHeight = container.height();
@@ -61,8 +63,22 @@ $(document).ready(function () {
     }
   }
 
+  function createStars() {
+    for (var k = 0; k < starNum; k++) {
+      var newStar = $("<div />");
+      newStar.addClass("star-five");
+
+      newStar.css({
+        left: Math.random() * Math.max(containerWidth, 0),
+        top: Math.random() * Math.max(containerHeight, 0)
+      });
+      container.append(newStar);
+    }
+  }
+
   createCircles();
   createHearts();
+  createStars();
 
 
 });
