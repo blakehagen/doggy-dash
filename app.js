@@ -3,22 +3,22 @@ $(document).ready(function () {
     switch (e.which) {
       case 37:
         $('.doggy').stop().animate({
-          left: '-=70'
+          left: '-=30'
         }, 200); //left arrow key
         break;
       case 38:
         $('.doggy').stop().animate({
-          top: '-=70'
+          top: '-=30'
         }, 200); //up arrow key
         break;
       case 39:
         $('.doggy').stop().animate({
-          left: '+=70'
+          left: '+=30'
         }, 200); //right arrow key
         break;
       case 40:
         $('.doggy').stop().animate({
-          top: '+=70'
+          top: '+=30'
         }, 200); //bottom arrow key
         break;
     }
